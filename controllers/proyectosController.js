@@ -8,7 +8,7 @@ exports.proyectosHome = async (req, res) => {
     const proyectos = await Proyectos.findAll({where: { usuarioId}});//Si quieres mostrar todos los proyectos (Es como pones Select * from proyectos)
     
     //res.send('Index'); 
-    res.render('Index',{
+    res.render('index',{
         nombrePagina : 'Proyectos ' + res.locals.year,
         proyectos
     });
